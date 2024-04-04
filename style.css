@@ -1,3 +1,5 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto+Mono:100,200,300,regular,500,600,700,100italic,200italic,300italic,italic,500italic,600italic,700italic);
+
 body {
     margin: 0;
     padding: 0;
@@ -5,7 +7,7 @@ body {
     color: white;
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    font-family: "Roboto Mono", serif;
 }
 
 /* HEADER */
@@ -59,11 +61,17 @@ body {
 /* MAIN */
 .main-section {
     min-height: 100vh;
+    display: flex;
+    flex-direction: column;
     background-color: white;
     color: black;
+    overflow: hidden;
+    padding: 20px;
 }
 
 .main-work-section {
+    flex: 1;
+    overflow-y: auto;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 20px;
@@ -96,9 +104,53 @@ body {
 }
 
 .project {
-    border: 1px solid black;
-    border-radius: 10px;
+    border-radius: 8px;
     padding: 10px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    transition: transform 700ms ease, box-shadow 700ms ease;
+}
+
+.project:hover {
+    transform: scale(1.05);
+    box-shadow: rgba(0, 0, 0, 0.188) 0px 8px 24px;
+}
+
+.project-image {
+    height: 200px;
+    width: auto;
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-image p {
+    font-size: 24px;
+}
+
+.one {
+    background-color: #fffff7;
+}
+
+.two {
+    background-color: #fbfbeb;
+}
+
+.three {
+    background-color: #e2e2d4;
+}
+
+.four {
+    background-color: #c9c9bc;
+}
+
+.five {
+    background-color: #b5b5a9;
+}
+
+.six {
+    background-color: #a3a398;
 }
 
 .project-footer-top {
@@ -107,11 +159,17 @@ body {
     justify-content: space-between;
 }
 
+.project-links,
+.links {
+    font-size: 24px;
+}
+
 /* FOOTER */
 footer {
     display: flex;
     flex-wrap: wrap;
-    align-items: flex-start;
+    align-items: center;
+    justify-content: center;
     padding: 20px;
 }
 
